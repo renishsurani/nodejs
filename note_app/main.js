@@ -1,3 +1,4 @@
+// noteApp
 const exportedVariables = require("./functions.js");
 const readline = require("readline-sync");
 let choice = -1;
@@ -18,7 +19,7 @@ do {
       let noteData1 = exportedVariables.displayNote();
       let selectLine1 = parseInt(readline.question("Enter Line No : "));
       let newMessage = readline.question("Enter Message : ");
-      exportedVariables.updateNote(selectLine1, noteData1,newMessage);
+      exportedVariables.updateNote(selectLine1, noteData1, newMessage);
       break;
     case 3:
       let noteData = exportedVariables.displayNote();
@@ -29,6 +30,6 @@ do {
       exportedVariables.displayNote();
       break;
     default:
-        console.log("Invalide Choice..!");
+      console.log("Invalide Choice..!");
   }
 } while (choice != 0);
